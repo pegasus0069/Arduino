@@ -1,4 +1,3 @@
-//Thanks to CoolBoy IFTY
 #define ENA 5
 #define IN1 6
 #define IN2 7 
