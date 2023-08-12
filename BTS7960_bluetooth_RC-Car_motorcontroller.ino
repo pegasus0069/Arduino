@@ -1,11 +1,12 @@
-int L_EN_FOR_ONE=11;
-int R_EN_FOR_ONE=12;
-int L_PWM_FOR_ONE=9;
-int R_PWM_FOR_ONE=10;
-int L_EN_FOR_TWO=7;
-int R_EN_FOR_TWO=8;
-int L_PWM_FOR_TWO=5;
-int R_PWM_FOR_TWO=6;
+int L_EN_FOR_ONE=3;
+int L_PWM_FOR_ONE=5;
+int R_EN_FOR_ONE=4;
+int R_PWM_FOR_ONE=6;
+
+int L_EN_FOR_TWO=8;
+int R_EN_FOR_TWO=9;
+int L_PWM_FOR_TWO=10;
+int R_PWM_FOR_TWO=11;
 
 int incomingByte=0; // for incoming serial data
 int speed_min = 125; //the minimum "speed" the motors will turn - take it lower and motors don't turn
@@ -181,29 +182,29 @@ if (Serial.available() > 0) {
 void forward(){
   analogWrite(R_PWM_FOR_ONE,0);
   analogWrite(L_PWM_FOR_ONE,speed_left);
-  analogWrite(R_PWM_FOR_TWO,0);
-  analogWrite(L_PWM_FOR_TWO,speed_right);
+  analogWrite(R_PWM_FOR_TWO,speed_right);
+  analogWrite(L_PWM_FOR_TWO,0);
   };
   
 void backward(){
   analogWrite(R_PWM_FOR_ONE,speed_left);
   analogWrite(L_PWM_FOR_ONE,0);
-  analogWrite(R_PWM_FOR_TWO,speed_right);
-  analogWrite(L_PWM_FOR_TWO,0);
+  analogWrite(R_PWM_FOR_TWO,0);
+  analogWrite(L_PWM_FOR_TWO,speed_right);
   };
   
 void right(){
   analogWrite(R_PWM_FOR_ONE,0);
   analogWrite(L_PWM_FOR_ONE,speed_left);
-  analogWrite(R_PWM_FOR_TWO,speed_right);
-  analogWrite(L_PWM_FOR_TWO,0);
+  analogWrite(R_PWM_FOR_TWO,0);
+  analogWrite(L_PWM_FOR_TWO,speed_right);
   };
   
 void left(){
   analogWrite(R_PWM_FOR_ONE,speed_left);
   analogWrite(L_PWM_FOR_ONE,0);
-  analogWrite(R_PWM_FOR_TWO,0);
-  analogWrite(L_PWM_FOR_TWO,speed_right);
+  analogWrite(R_PWM_FOR_TWO,speed_right);
+  analogWrite(L_PWM_FOR_TWO,0);
   };
   
 void stopo(){
@@ -216,8 +217,8 @@ void stopo(){
 void forward_left(){
   analogWrite(R_PWM_FOR_ONE,0);
   analogWrite(L_PWM_FOR_ONE,0);
-  analogWrite(R_PWM_FOR_TWO,0);
-  analogWrite(L_PWM_FOR_TWO,speed_right);
+  analogWrite(R_PWM_FOR_TWO,speed_right);
+  analogWrite(L_PWM_FOR_TWO,0);
   };
   
 void forward_right(){
@@ -230,8 +231,8 @@ void forward_right(){
 void back_left(){
   analogWrite(R_PWM_FOR_ONE,0);
   analogWrite(L_PWM_FOR_ONE,0);
-  analogWrite(R_PWM_FOR_TWO,speed_right);
-  analogWrite(L_PWM_FOR_TWO,0);
+  analogWrite(R_PWM_FOR_TWO,0);
+  analogWrite(L_PWM_FOR_TWO,speed_right);
   };
   
 void back_right(){
