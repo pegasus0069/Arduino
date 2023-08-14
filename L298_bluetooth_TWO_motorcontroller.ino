@@ -1,19 +1,19 @@
 //Thanks to CoolBoy IFTY
 //LEFT
-int ENA_L =7;
-int IN1_L =8;
-int IN2_L =9; 
-int IN3_L =10; 
-int IN4_L =11;
-int ENB_L =12;
+int ENA_L =3;
+int IN1_L =2;
+int IN2_L =4; 
+int IN3_L =5; 
+int IN4_L =7;
+int ENB_L =6;
 
 //RIGHT
-int ENA_R= 5;
-int IN1_R =15;
-int IN2_R =16; 
-int IN3_R =17; 
-int IN4_R =18;
-int ENB_R =6;
+int ENA_R= 10;
+int IN1_R =8;
+int IN2_R =9; 
+int IN3_R =12; 
+int IN4_R =13;
+int ENB_R =11;
 
 char incomingByte=0; // for incoming serial data
 int speed_min = 135; //the minimum "speed" the motors will turn - take it lower and motors don't turn
